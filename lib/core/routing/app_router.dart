@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:pet_finder_app/core/routing/routes.dart';
+import '../../features/splash/presentation/ui/screens/splash_screen.dart';
 
 class AppRouter {
   Route? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      // case Routes.splashScreen:
-      //   return MaterialPageRoute(builder: (context) => const SplashScreen());
+      case Routes.splashScreen:
+        return MaterialPageRoute(builder: (context) => const SplashScreen());
       // case Routes.onboardingScreen:
       //   return MaterialPageRoute(
       //     builder: (context) => const OnboardingScreen(),
