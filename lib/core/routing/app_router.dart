@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pet_finder_app/core/routing/routes.dart';
+import '../../features/onboarding/presentation/ui/screens/onboarding_screen.dart';
 import '../../features/splash/presentation/ui/screens/splash_screen.dart';
 
 class AppRouter {
@@ -7,10 +8,10 @@ class AppRouter {
     switch (settings.name) {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (context) => const SplashScreen());
-      // case Routes.onboardingScreen:
-      //   return MaterialPageRoute(
-      //     builder: (context) => const OnboardingScreen(),
-      //   );
+      case Routes.onboardingScreen:
+        return MaterialPageRoute(
+          builder: (context) => const OnboardingScreen(),
+        );
       // case Routes.homeScreen:
       //   return MaterialPageRoute(builder: (context) => const HomeScreen());
       // case Routes.detailsScreen:
