@@ -5,7 +5,7 @@ import '../../features/favorites/presentation/ui/screens/favorites_screen.dart';
 import '../../features/home/presentation/ui/screens/home_screen.dart';
 import '../../features/messages/presentation/ui/screens/messages_screen.dart';
 import '../../features/onboarding/presentation/ui/screens/onboarding_screen.dart';
-import '../../features/profile/presentation/ui/screens/settings_screen.dart';
+import '../../features/profile/presentation/ui/screens/profile_screen.dart';
 import '../../features/splash/presentation/ui/screens/splash_screen.dart';
 
 class AppRouter {
