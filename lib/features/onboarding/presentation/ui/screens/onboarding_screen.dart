@@ -46,7 +46,7 @@ class OnboardingScreen extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamedAndRemoveUntil(
                   context,
-                  Routes.homeScreen,
+                  Routes.homeLayoutScreen,
                   (route) => false,
                 );
               },
