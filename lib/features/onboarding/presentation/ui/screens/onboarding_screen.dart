@@ -30,7 +30,7 @@ class OnboardingScreen extends StatelessWidget {
               style: GoogleFonts.poppins(
                 fontSize: 32.sp,
                 fontWeight: FontWeight.bold,
-                color: AppPalette.blackText,
+                color: AppPalette.black500,
               ),
             ),
             Text(
@@ -38,7 +38,7 @@ class OnboardingScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 16.sp,
-                color: AppPalette.grayText,
+                color: AppPalette.gray150,
               ),
             ),
             SizedBox(height: 30.h),
