@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pet_finder_app/core/di/injection.dart';
 import 'package:pet_finder_app/core/routing/routes.dart';
+import 'package:pet_finder_app/features/home/presentation/cubit/home_cubit.dart';
+import 'package:pet_finder_app/features/home_layout/presentation/cubit/nav_index_cubit.dart';
 import 'package:pet_finder_app/features/home_layout/presentation/ui/screens/home_layout_screen.dart';
 import '../../features/favorites/presentation/ui/screens/favorites_screen.dart';
 import '../../features/home/presentation/ui/screens/home_screen.dart';
@@ -19,10 +23,22 @@ class AppRouter {
         );
       case Routes.homeLayoutScreen:
         return MaterialPageRoute(
-          builder: (context) => const HomeLayoutScreen(),
+          builder: (_) => MultiBlocProvider(
+            providers: [
+              BlocProvider(create: (_) => NavIndexCubit()),
+              BlocProvider<HomeCubit>(
+                create: (_) => getIt<HomeCubit>()..getAllBirds(),
+              ),
+            ],
+            child: const HomeLayoutScreen(),
+          ),
         );
       case Routes.homeScreen:
-        return MaterialPageRoute(builder: (context) => const HomeScreen());
+        return MaterialPageRoute(
+          builder: (context) {
+            return HomeScreen();
+          },
+        );
       // case Routes.detailsScreen:
       //   return MaterialPageRoute(builder: (context) => const DetailsScreen());
       case Routes.favoriteScreen:
